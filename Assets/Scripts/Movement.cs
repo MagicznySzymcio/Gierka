@@ -58,13 +58,5 @@ public class Movement : MonoBehaviour
                 rb2d.AddForce(new Vector2(-velocityDelta, zeroVelocity));
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.name == "End")
-        {
-            collision.GetComponent<EndGame>().OnGameEnd();
-        }
-    }
 }
 
