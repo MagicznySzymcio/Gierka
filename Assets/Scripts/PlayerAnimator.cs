@@ -8,7 +8,6 @@ public class PlayerAnimator : MonoBehaviour
     private int currentFrame;
     private float timer;
 
-
     // Update is called once per frame
     void Update()
     {
