@@ -11,6 +11,7 @@ public class EnemyMovement : MonoBehaviour
     private float zeroVelocity = 0.0f;
     Rigidbody2D rb2d_en;
     private bool isGrounded;
+    GameObject cover;
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class EnemyMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        Debug.Log(rb2d_en.velocity.x);
         if (Vector2.Distance(rb2d_en.transform.position,GameObject.Find("Player").GetComponent<Rigidbody2D>().transform.position) < 7.5f)
         {
             Attack();
@@ -37,16 +39,14 @@ public class EnemyMovement : MonoBehaviour
 
     void Patrol()
     {
-        if (rb2d_en.position.x > 5 && rb2d_en.velocity.x <= 0)
+        if (rb2d_en.position.x > 15 && rb2d_en.velocity.x <= 0)
         {
-            Debug.Log(rb2d_en.position.x);
             if (rb2d_en.velocity.x > -maxVelocity)
                 rb2d_en.AddForce(new Vector2(-velocityDelta, zeroVelocity));
 
         }
-        else if (rb2d_en.position.x < 10)
+        else if (rb2d_en.position.x < 25)
         {
-            Debug.Log(rb2d_en.position.x);
             if (rb2d_en.velocity.x < maxVelocity)
                 rb2d_en.AddForce(new Vector2(velocityDelta, zeroVelocity));
         }
@@ -54,10 +54,13 @@ public class EnemyMovement : MonoBehaviour
 
     void Attack()
     {
-        // Jump as placeholder
-        if (isGrounded)
+        if (Vector2.Distance(rb2d_en.transform.position, GameObject.Find("Cover").transform.position) > 0.1f)
         {
-            rb2d_en.velocity += Vector2.up * 5.0f;
+            rb2d_en.AddForce(Vector2.MoveTowards(GameObject.Find("Cover").transform.position, rb2d_en.transform.position, -3 * velocityDelta));
+        }
+        else
+        {
+            rb2d_en.velocity = new Vector2(zeroVelocity, zeroVelocity);
         }
     }
 }
