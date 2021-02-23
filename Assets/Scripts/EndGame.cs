@@ -23,9 +23,4 @@ public class EndGame : MonoBehaviour
         player.SetActive(false);
         button.SetActive(true);
     }
-
-    public void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
 }
