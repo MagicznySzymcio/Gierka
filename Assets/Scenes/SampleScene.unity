@@ -128,6 +128,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9058699546542498726, guid: b46f84ed495f0d040be0359753a1c7dc,
         type: 3}
       propertyPath: m_Name
       value: PixelTest (1)
