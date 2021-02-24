@@ -6,6 +6,7 @@ public class TestMass : MonoBehaviour
 {
     Rigidbody2D rb;
     bool hasHit = false;
+    float rotate = 180;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,7 +24,7 @@ public class TestMass : MonoBehaviour
     void Test()
     {
         Vector2 direction = rb.velocity;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 180;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + rotate;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
@@ -32,6 +33,15 @@ public class TestMass : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             Destroy(collision.gameObject);
+        }
+        int layerName = LayerMask.NameToLayer("groundLayers");
+        if (collision.gameObject.layer == layerName) {
+            hasHit = true;
+            rb.velocity = Vector3.zero;
+            rb.isKinematic = true;
+            GetComponent<Collider2D>().enabled = false;
+            rotate = rb.rotation;
+            Test();
         }
     }
 }
