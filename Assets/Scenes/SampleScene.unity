@@ -455,6 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fea80a52411b7d844a74a345744db2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currForce: 0
   Force: 150
   DzidaObject: {fileID: 723004240527542217, guid: d4eee1f331289ab4792868c0dec77ece,
     type: 3}
@@ -580,6 +581,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 239179712612254832, guid: d89e4cb0e6e3ab44f8a0c8be20d921dc,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 239179712612254832, guid: d89e4cb0e6e3ab44f8a0c8be20d921dc,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 239179712612254832, guid: d89e4cb0e6e3ab44f8a0c8be20d921dc,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 239179712612254832, guid: d89e4cb0e6e3ab44f8a0c8be20d921dc,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 239179712612254832, guid: d89e4cb0e6e3ab44f8a0c8be20d921dc,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 239179712612254832, guid: d89e4cb0e6e3ab44f8a0c8be20d921dc,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 239179712612254833, guid: d89e4cb0e6e3ab44f8a0c8be20d921dc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 239179712612254833, guid: d89e4cb0e6e3ab44f8a0c8be20d921dc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d89e4cb0e6e3ab44f8a0c8be20d921dc, type: 3}
