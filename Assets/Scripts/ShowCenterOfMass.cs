@@ -9,11 +9,6 @@ public class ShowCenterOfMass : MonoBehaviour
     public GameObject DzidaObject;
     public GameObject Player;
 
-    void Start()
-    {
-
-    }
-
     private void Update()
     {
 
@@ -25,19 +20,13 @@ public class ShowCenterOfMass : MonoBehaviour
 
     void Shoot()
     {
-        
-        float ScreenWidthCenter = Screen.width / 2;
-        float ScreenHeigthCenter = Screen.height / 2;
-        Vector3 mousePlacement = Input.mousePosition;
 
-        if (mousePlacement.x < ScreenWidthCenter) currForce = Force;
-        else currForce = -Force;
-        Debug.Log((mousePlacement.x - Screen.width/2 + ":" + ScreenWidthCenter + ":" + currForce));
+        Vector3 mousePlacement = Input.mousePosition;
+        Ray castPoint = Camera.main.ScreenPointToRay(mousePlacement);
+
         GameObject Dzida = Instantiate(DzidaObject, transform.position, transform.rotation);
-        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(new Vector3(
-                                                        mousePlacement.x - Screen.width/2,
-                                                        mousePlacement.y - Screen.height/2,
-                                                        1));
-        Dzida.GetComponent<Rigidbody2D>().AddForce(mouseWorld * currForce);
+        Dzida.GetComponent<Rigidbody2D>().AddForce(new Vector2(
+                                                        castPoint.origin.x - Player.transform.position.x,
+                                                        castPoint.origin.y - Player.transform.position.y) * Force);
     }
 }
