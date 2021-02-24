@@ -23,7 +23,7 @@ public class TestMass : MonoBehaviour
     void Test()
     {
         Vector2 direction = rb.velocity;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 225;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 

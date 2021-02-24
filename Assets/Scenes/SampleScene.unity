@@ -458,6 +458,7 @@ MonoBehaviour:
   Force: 150
   DzidaObject: {fileID: 723004240527542217, guid: d4eee1f331289ab4792868c0dec77ece,
     type: 3}
+  Player: {fileID: 838508400}
 --- !u!4 &838508402 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1543639882400231529, guid: 161838a86e687ae4d909e058d62245e6,

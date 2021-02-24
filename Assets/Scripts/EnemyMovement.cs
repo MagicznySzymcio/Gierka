@@ -26,7 +26,6 @@ public class EnemyMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(rb2d_en.velocity.x);
         if (Vector2.Distance(rb2d_en.transform.position,GameObject.Find("Player").GetComponent<Rigidbody2D>().transform.position) < 5.5f)
         {
             Attack();
