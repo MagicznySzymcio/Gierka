@@ -30,5 +30,9 @@ public class TestMass : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         hasHit = true;
+        if (collision.collider.name == "Enemy")
+        {
+            Destroy(collision.collider.gameObject);
+        }
     }
 }
