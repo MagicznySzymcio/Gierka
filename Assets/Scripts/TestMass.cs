@@ -27,12 +27,11 @@ public class TestMass : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        hasHit = true;
-        if (collision.collider.name == "Enemy")
+        if (collision.tag == "Enemy")
         {
-            Destroy(collision.collider.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }
