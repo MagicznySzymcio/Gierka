@@ -37,8 +37,11 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Walls
   m_SortingLayers:
+  - name: Wall
+    uniqueID: 499727523
+    locked: 0
   - name: Bg
     uniqueID: 3599281903
     locked: 0
