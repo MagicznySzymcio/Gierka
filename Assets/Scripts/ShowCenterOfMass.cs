@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class ShowCenterOfMass : MonoBehaviour
 {
+    public float currForce;
     public float Force;
     public GameObject DzidaObject;
     public GameObject Player;
 
     private void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Shoot();
