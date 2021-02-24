@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fea80a52411b7d844a74a345744db2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Force: 1500
+  Force: 150
   DzidaObject: {fileID: 723004240527542217, guid: d4eee1f331289ab4792868c0dec77ece,
     type: 3}
 --- !u!4 &838508402 stripped
