@@ -23,6 +23,11 @@ public class ShowCenterOfMass : MonoBehaviour
     void Shoot()
     {
         GameObject Dzida = Instantiate(DzidaObject, transform.position, transform.rotation);
-        Dzida.GetComponent<Rigidbody2D>().AddForce(transform.right * Force);
+        Vector3 mousePlacement = Input.mousePosition;
+        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(new Vector3(
+                                                        mousePlacement.x,
+                                                        mousePlacement.y,
+                                                        1));
+        Dzida.GetComponent<Rigidbody2D>().AddForce(mouseWorld * Force);
     }
 }

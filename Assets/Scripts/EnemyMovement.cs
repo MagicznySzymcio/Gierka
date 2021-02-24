@@ -63,5 +63,6 @@ public class EnemyMovement : MonoBehaviour
             rb2d_en.velocity = new Vector2(zeroVelocity, zeroVelocity);
         }
     }
+
 }
 
