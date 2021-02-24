@@ -1,0 +1,3 @@
+floor rysowane 60x10 konwertowane 8x do 480x80
+0.8x1.8(1.84) teoretycznie postaæ powinna mieæ 80x180
+0.1 wspó³rzednej odpowiada 10 pixelom
