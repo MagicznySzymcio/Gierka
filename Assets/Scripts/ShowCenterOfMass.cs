@@ -19,10 +19,6 @@ public class ShowCenterOfMass : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
-            //Vector3 mousePlacement = Input.mousePosition;
-            //Debug.Log(Player.transform.position.x + " : " + (mousePlacement.x - Screen.width / 2));
-            //Debug.Log(Player.transform.position.y + " : " + (mousePlacement.y - Screen.height / 2));
             Shoot();
         }
     }
@@ -36,11 +32,11 @@ public class ShowCenterOfMass : MonoBehaviour
 
         if (mousePlacement.x < ScreenWidthCenter) currForce = Force;
         else currForce = -Force;
-        Debug.Log((mousePlacement.x + ":" + ScreenWidthCenter + ":" + currForce));
+        Debug.Log((mousePlacement.x - Screen.width/2 + ":" + ScreenWidthCenter + ":" + currForce));
         GameObject Dzida = Instantiate(DzidaObject, transform.position, transform.rotation);
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(new Vector3(
-                                                        mousePlacement.x - Screen.width,
-                                                        mousePlacement.y,
+                                                        mousePlacement.x - Screen.width/2,
+                                                        mousePlacement.y - Screen.height/2,
                                                         1));
         Dzida.GetComponent<Rigidbody2D>().AddForce(mouseWorld * currForce);
     }
