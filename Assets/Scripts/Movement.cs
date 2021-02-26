@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
     private float zeroVelocity = 0.0f;
     private bool doubleJump;
     private bool isGrounded;
-    Rigidbody2D rb2d;
+    private Rigidbody2D rb2d;
 
     void Start()
     {
