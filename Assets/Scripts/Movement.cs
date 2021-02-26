@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    [SerializeField] private GameObject PauseMenu;
     [SerializeField] private LayerMask groundLayers;
     [SerializeField] private float maxVelocity = 8.0f;
     [SerializeField] private float velocityDelta = 50.0f;
@@ -16,6 +17,7 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
+        Instantiate(PauseMenu);
         rb2d = GetComponent<Rigidbody2D>();
     }
 
