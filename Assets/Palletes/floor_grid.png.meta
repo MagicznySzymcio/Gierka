@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 2e6ca3e49c75ba048b9128867630a14d
+guid: 5958935f507aa3a45b1430c87e5e3e40
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8946210304921705960
-    second: zly_murzyn_0
+      213: 4659278782772898100
+    second: floor_grid_0
   - first:
-      213: 2605564920652553484
-    second: zly_murzyn_1
+      213: -5699235762304469470
+    second: floor_grid_1
   - first:
-      213: -3154871452044094946
-    second: zly_murzyn_2
+      213: -6452039305259830163
+    second: floor_grid_2
+  - first:
+      213: 5934693930429068307
+    second: floor_grid_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -54,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 80
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,13 +99,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zly_murzyn_0
+      name: floor_grid_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 32
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,20 +113,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 812e331702da8d380800000000000000
-      internalID: -8946210304921705960
+      spriteID: 43961b4fd5519a040800000000000000
+      internalID: 4659278782772898100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zly_murzyn_1
+      name: floor_grid_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 80
         y: 0
-        width: 16
-        height: 32
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0dd6be8d73d82420800000000000000
-      internalID: 2605564920652553484
+      spriteID: 226b3a0254f38e0b0800000000000000
+      internalID: -5699235762304469470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zly_murzyn_2
+      name: floor_grid_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 160
         y: 0
-        width: 16
-        height: 32
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +155,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1214ec2125a734d0800000000000000
-      internalID: -3154871452044094946
+      spriteID: d64312daf60c576a0800000000000000
+      internalID: -6452039305259830163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor_grid_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31434e5bfa44c5250800000000000000
+      internalID: 5934693930429068307
       vertices: []
       indices: 
       edges: []
