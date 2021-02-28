@@ -20,6 +20,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Shoot();
+
         }
     }
 
@@ -33,5 +34,6 @@ public class Shooting : MonoBehaviour
         Dzida.GetComponent<Rigidbody2D>().AddForce(new Vector2(
                                                         castPoint.origin.x - Player.transform.position.x,
                                                         castPoint.origin.y - Player.transform.position.y) * Force);
+        DzidaList.DzidaUpdate(Dzida);
     }
 }
