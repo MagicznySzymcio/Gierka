@@ -60,12 +60,21 @@ public class Movement : MonoBehaviour
                 rb2d.AddForce(new Vector2(-velocityDelta, zeroVelocity));
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.name == "End")
         {
             collision.GetComponent<EndGame>().OnGameEnd();
+        }
+
+        if (collision.name == "TestGun")
+        {
+            Transform gun = collision.gameObject.transform;
+            gun.SetParent(rb2d.transform, false);
+            gun.GetChild(0).transform.position = new Vector3(rb2d.transform.position.x + 0.2f,rb2d.transform.position.y - 0.3f , 0);
+            gun.GetChild(0).transform.rotation = Quaternion.identity;
+            gun.transform.GetChild(0).transform.localScale = new Vector3(2, 2, 0);
+            collision.isTrigger = false;
         }
     }
 }
