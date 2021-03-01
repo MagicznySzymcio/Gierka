@@ -71,10 +71,11 @@ public class Movement : MonoBehaviour
         {
             Transform gun = collision.gameObject.transform;
             gun.SetParent(rb2d.transform, false);
-            gun.GetChild(0).transform.position = new Vector3(rb2d.transform.position.x + 0.2f,rb2d.transform.position.y - 0.3f , 0);
-            gun.GetChild(0).transform.rotation = Quaternion.identity;
-            gun.transform.GetChild(0).transform.localScale = new Vector3(2, 2, 0);
-            collision.isTrigger = false;
+            gun.transform.position = new Vector3(rb2d.transform.position.x + 0.2f,rb2d.transform.position.y - 0.3f , 0);
+            gun.transform.rotation = Quaternion.identity;
+            gun.transform.transform.localScale = new Vector3(2, 2, 0);
+            Aiming aiming = rb2d.gameObject.GetComponent<Aiming>();
+            aiming.enabled = true;
         }
     }
 }
