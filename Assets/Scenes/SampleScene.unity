@@ -177,7 +177,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 89e4ce6b5b9b47a4ea2bf5e7e3ef7193, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2419,6 +2419,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 1448270506}
+  - {fileID: 1270146231}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 42.626}
@@ -3632,6 +3633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be6abf8460ef3a438f4825d71e29ba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Bullet: {fileID: 979361195405728994, guid: 5f21a68f62c79794dad711a24c7c5a54, type: 3}
 --- !u!1 &947202958
 GameObject:
   m_ObjectHideFlags: 0
@@ -3675,6 +3677,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa17f821f4ce494a9a2b1a4295c7ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1270146230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1270146231}
+  m_Layer: 0
+  m_Name: Barrel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1270146231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270146230}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.254, y: 0.027, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 375226036}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1357604205
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ public class DzidaList : MonoBehaviour
         if (liczbaDzid > maxDzid)
         {
             GameObject go = listaDzid.Dequeue();
-            go.GetComponent<BulletController>().Fade();
+            go.GetComponent<DzidaController>().Fade();
             // Destroy(listaDzid.Dequeue());
         }
 
