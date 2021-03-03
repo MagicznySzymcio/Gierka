@@ -11,7 +11,6 @@ public class PlayerAnimatorStates : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(anim.GetBool("isRunning"));
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             anim.SetBool("isRunning", true);
