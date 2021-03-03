@@ -2,26 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestMass : MonoBehaviour
+public class BulletController : MonoBehaviour
 {
-    Rigidbody2D rb;
-    bool hasHit = false;
-    float rotate = 180;
+    private Rigidbody2D rb;
+    private bool hasHit = false;
+    private float rotate = 180;
+    public SpriteRenderer spriteToFade;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (hasHit == false)
         {
-            Test();
+            Rotate();
         }
     }
 
-    void Test()
+    void Rotate()
     {
         Vector2 direction = rb.velocity;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + rotate;
@@ -34,14 +35,34 @@ public class TestMass : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+
         int layerName = LayerMask.NameToLayer("groundLayers");
-        if (collision.gameObject.layer == layerName) {
+        if (collision.gameObject.layer == layerName)
+        {
             hasHit = true;
             rb.velocity = Vector3.zero;
             rb.isKinematic = true;
             GetComponent<Collider2D>().enabled = false;
             rotate = rb.rotation;
-            Test();
+            Rotate();
         }
+    }
+
+    IEnumerator FadeOut()
+    {
+        for (float f = 1f; f >= -0.05f; f -= 0.05f)
+        {
+            Color c = spriteToFade.material.color;
+            c.a = f;
+            spriteToFade.material.color = c;
+            yield return new WaitForSeconds(0.05f);
+        }
+        Destroy(gameObject);
+    }
+
+    public void Fade()
+    {
+        spriteToFade = gameObject.GetComponent<SpriteRenderer>();
+        StartCoroutine("FadeOut");
     }
 }

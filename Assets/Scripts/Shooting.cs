@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShowCenterOfMass : MonoBehaviour
+public class Shooting : MonoBehaviour
 {
-    public float currForce;
-    public float Force;
-    public GameObject DzidaObject;
-    public GameObject Player;
+    [SerializeField] private float Force;
+    [SerializeField] private GameObject Bullet;
+    private GameObject Player;
+    public Transform DzidaContainer;
+
+    void Start()
+    {
+        Player = gameObject;
+    }
 
     private void Update()
     {
@@ -15,17 +20,20 @@ public class ShowCenterOfMass : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Shoot();
+
         }
     }
+
     void Shoot()
     {
 
         Vector3 mousePlacement = Input.mousePosition;
         Ray castPoint = Camera.main.ScreenPointToRay(mousePlacement);
 
-        GameObject Dzida = Instantiate(DzidaObject, transform.position, transform.rotation);
+        GameObject Dzida = Instantiate(Bullet, transform.position, transform.rotation, DzidaContainer);
         Dzida.GetComponent<Rigidbody2D>().AddForce(new Vector2(
                                                         castPoint.origin.x - Player.transform.position.x,
                                                         castPoint.origin.y - Player.transform.position.y) * Force);
+        DzidaList.DzidaUpdate(Dzida);
     }
 }

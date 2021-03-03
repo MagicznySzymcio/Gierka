@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    public bool GameIsPaused;
-    public GameObject PauseMenuUI;
+    private bool GameIsPaused;
+    private GameObject PauseMenuUI;
 
     private void Start()
     {
+        PauseMenuUI = gameObject.transform.GetChild(0).gameObject;
         GameIsPaused = false;
         Time.timeScale = 1f;
         PauseMenuUI.SetActive(false);
