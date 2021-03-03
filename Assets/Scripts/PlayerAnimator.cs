@@ -18,6 +18,6 @@ public class PlayerAnimator : MonoBehaviour
             currentFrame = (currentFrame + 1) % frameArray.Length;
             gameObject.GetComponent<SpriteRenderer>().sprite = frameArray[currentFrame];
         }
-        
+
     }
 }

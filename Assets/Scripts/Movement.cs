@@ -23,8 +23,8 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = Physics2D.OverlapArea(new Vector2(transform.position.x - 0.5f, transform.position.y - 1.0f),
-            new Vector2(transform.position.x + 0.5f, transform.position.y - 1.05f), groundLayers);
+        isGrounded = Physics2D.OverlapArea(new Vector2(transform.position.x - 0.49f, transform.position.y - 1.0f),
+            new Vector2(transform.position.x + 0.49f, transform.position.y - 1.05f), groundLayers);
 
         if (isGrounded)
         {
@@ -67,7 +67,7 @@ public class Movement : MonoBehaviour
             collision.GetComponent<EndGame>().OnGameEnd();
         }
 
-        if (collision.name == "TestGun")
+        if (collision.name == "AK-47")
         {
             Transform gun = collision.gameObject.transform;
             gun.SetParent(rb2d.transform, false);

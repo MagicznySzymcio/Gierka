@@ -9,9 +9,10 @@ public class Aiming : MonoBehaviour
     private Vector3 pos, scale;
     private bool canShoot = true;
     private GameObject Barrel;
+    [SerializeField] private float fireRateTime = 0.1f;
     void Start()
     {
-        aimTransform = transform.Find("TestGun");
+        aimTransform = transform.Find("AK-47");
         pos = aimTransform.position;
         scale = aimTransform.localScale;
         Barrel = aimTransform.gameObject.transform.Find("Barrel").gameObject;
@@ -34,7 +35,7 @@ public class Aiming : MonoBehaviour
     {
         Shoot();
         canShoot = false;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(fireRateTime);
         canShoot = true;
     }
 
